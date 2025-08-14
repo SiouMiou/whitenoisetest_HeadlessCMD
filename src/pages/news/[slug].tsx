@@ -6,6 +6,7 @@ import Navigation from '../../../components/Navigation'
 import {client} from '../../../lib/sanity.client'
 import {newsQuery, newsBySlugQuery} from '../../../lib/queries'
 import {News} from '../../../types/news'
+import Link from 'next/link'
 
 interface NewsDetailProps {
   news: News
@@ -58,7 +59,7 @@ export default function NewsDetail({news}: NewsDetailProps) {
         </article>
         
         <div className="back-link">
-          <a href="/">← 返回首頁</a>
+          <Link href="/">← 返回首頁</Link>
         </div>
         
         <style jsx>{`
